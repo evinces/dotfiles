@@ -49,25 +49,25 @@ sudo vim /etc/conf.d/wireless-regdom
 sudo vim /etc/pacman.conf
 > # Uncomment Color
 
-# 3. Version control 
-sudo pacman -S git jujutsu base-devel
-jj config set --user user.name "<NAME>"
-jj config set --user user.email "<EMAIL>"
-export GIT_HOME="${GIT_HOME:-$HOME/git}"
-mkdir -p $GIT_HOME
-
-# 4. Authentication (SSH)
+# 3. Authentication (SSH)
 ssh-keygen -t ed25519 -C "<EMAIL>"
 cat ~/.ssh/id_ed25519.pub
 # Action: Copy the output and add it to [GitHub Settings > SSH and GPG Keys](https://github.com/settings/keys).
 
+# 4. Version control 
+sudo pacman -S git base-devel
+git config set --user user.name "<NAME>"
+git config set --user user.email "<EMAIL>"
+export GIT_HOME="${GIT_HOME:-$HOME/git}"
+mkdir -p $GIT_HOME
+
 # 5. Clone Dotfiles
-jj git clone git@github.com:evinces/dots.git $GIT_HOME/dots
-cd $GIT_HOME/dots
+git clone git@github.com:evinces/dotfiles.git $GIT_HOME/dotfiles
+cd $GIT_HOME/dotfiles
 ./make-links.py
 
 # 6. Clone & install paru
-jj git clone https://aur.archlinux.org/paru-bin.git $GIT_HOME/paru-bin
+git clone https://aur.archlinux.org/paru-bin.git $GIT_HOME/paru-bin
 cd $GIT_HOME/paru-bin
 makepkg -si
 paru --gendb
