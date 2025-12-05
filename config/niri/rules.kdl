@@ -1,0 +1,32 @@
+window-rule {
+  match app-id="1Password"
+  match app-id="blender" title="Preferences"
+  match app-id="blueman-manager"
+  match app-id="python3" title="Stream Deck UI"
+  match app-id="zen" title="Picture-in-Picture"
+  match app-id="steam"
+  exclude app-id="steam" title="Steam"
+  open-floating true
+}
+window-rule {
+  match app-id="1Password"
+  block-out-from "screen-capture"
+}
+window-rule {
+  match app-id="blender"
+  exclude title="Preferences"
+  open-maximized true
+}
+window-rule {
+  match app-id="com.obsproject.Studio"
+  open-maximized true
+}
+window-rule {
+  match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+  default-floating-position x=10 y=10 relative-to="bottom-right"
+  open-focused false
+}
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}

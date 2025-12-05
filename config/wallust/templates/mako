@@ -1,0 +1,14 @@
+# Colors
+background-color={{background}}88
+text-color={{foreground}}
+border-color={{color5}}
+progress-color=over {{color6}}
+
+[urgency=low]
+border-color={{color4}}
+
+[urgency=normal]
+border-color={{color3}}
+
+[urgency=high]
+border-color={{color2}}

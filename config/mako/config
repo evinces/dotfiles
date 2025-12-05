@@ -1,0 +1,11 @@
+include=~/.config/mako/mako-colors
+
+sort=-time
+layer=overlay
+width=600
+border-radius=10
+default-timeout=5000
+font=VictorMono NFP 12
+
+[urgency=high]
+default-timeout=0

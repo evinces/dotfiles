@@ -1,0 +1,145 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "$XDG_CACHE_HOME/wallpaper/square-wallpaper.png",
+    "height": 16,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "3;33",
+      "output": "37"
+    },
+    "temp": {
+      "color": {
+        "red": "31",
+        "green": "32",
+        "yellow": "33"
+      }
+    },
+    "bar": {
+      "char": {
+        "elapsed": "",
+        "total": "\u001b[2;37m"
+      },
+      "border": {
+        "left": "\u001b[32m",
+        "right": "\u001b[2;37m"
+      },
+      "width": 16
+    },
+    "percent": {
+      "type": [
+        "bar",
+        "num"
+      ],
+      "color": {
+        "red": "31",
+        "green": "32",
+        "yellow": "33"
+      }
+    }
+  },
+  "modules": [
+    {
+      "key": "╭───────────────╮",
+      "type": "custom"
+    },
+    {
+      "key": "│ {#31} motherboard{#0;keys} │",
+      "type": "host",
+      "format": "{vendor} {#1;3;31}{name:5} {#0;3;31}{name~6}"
+    },
+    {
+      "key": "│ {#32} cpu        {#0;keys} │",
+      "type": "cpu",
+      "showPeCoreCount": true,
+      "format": "{name:3} {#1;3;32}{name~4,11} {#0;3;32}{name~12} {#2}{core-types} cores @ {freq-max} {#0;1;3}{temperature}",
+      "temp": true
+    },
+    {
+      "key": "│ {#33} gpu        {#0;keys} │",
+      "type": "gpu",
+      "format": "{name:6} {#1;3;33}{name~7,14} {#0;3;33}{name~15} {#2}{core-count} cores @ {frequency} {#0;1;3}{temperature}",
+      "temp": true,
+      "driverSpecific": true,
+      "hideType": "integrated"
+    },
+    {
+      "key": "│ {#34} memory     {#0;keys} │",
+      "type": "memory",
+      "format": "{percentage-bar} {#2}{percentage>3} {#0;3;34}{used>10} / {total>9}"
+    },
+    {
+      "key": "│ {#35}󰉉 disk:root  {#0;keys} │",
+      "type": "disk",
+      "folders": "/",
+      "format": "{size-percentage-bar} {#2}{size-percentage>3} {#3;35}{size-used>10} / {size-total>9} {#0;1;35}{mountpoint}"
+    },
+    {
+      "key": "│ {#36}󰉉 disk:games {#0;keys} │",
+      "type": "disk",
+      "folders": "/games",
+      "format": "{size-percentage-bar} {#2}{size-percentage>3} {#3;36}{size-used>10} / {size-total>9} {#0;1;36}{mountpoint}"
+    },
+    {
+      "key": "├───────────────┤",
+      "type": "custom"
+    },
+    {
+      "key": "│ {#31} kernel     {#0;keys} │",
+      "type": "kernel",
+      "format": "{sysname} {#1;2;3;31}{release}"
+    },
+    {
+      "key": "│ {#32} distro     {#0;keys} │",
+      "type": "os",
+      "format": "{pretty-name} {#1;2;3;32}{arch}"
+    },
+    {
+      "key": "│ {#33} desktop    {#0;keys} │",
+      "type": "command",
+      "text": "niri --version",
+      "format": "{result:4} {#1;2;3;33}v{result~5,-10}"
+    },
+    {
+      "key": "│ {#34} terminal   {#0;keys} │",
+      "type": "terminal",
+      "format": "{pretty-name} {#1;2;3;34}v{version}"
+    },
+    {
+      "key": "│ {#35} shell      {#0;keys} │",
+      "type": "shell",
+      "format": "{pretty-name} {#1;2;3;35}v{version}"
+    },
+    {
+      "key": "│ {#36}󰛖 font       {#0;keys} │",
+      "type": "terminalfont",
+      "format": "{name} {#1;2;3;36}{size}pt"
+    },
+    {
+      "key": "│ {#31}󰇀 cursor     {#0;keys} │",
+      "type": "cursor",
+      "format": "{theme} {#1;2;3;31}{size}px"
+    },
+    {
+      "key": "│ {#32}󰏖 packages   {#0;keys} │",
+      "type": "packages",
+      "format": "{pacman} {#1;2;3;34}pacman"
+    },
+    {
+      "key": "│ {#33} colors     {#0;keys} │{#0}  {#30}󰑊 {#31}󰑊 {#32}󰑊 {#33}󰑊 {#34}󰑊 {#35}󰑊 {#36}󰑊 {#37}󰑊 {#2;30}󰑊 {#31}󰑊 {#32}󰑊 {#33}󰑊 {#34}󰑊 {#35}󰑊 {#36}󰑊 {#37}󰑊",
+      "type": "custom"
+    },
+    {
+      "key": "╰───────────────╯",
+      "type": "custom"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+layout {
+  focus-ring {
+    active-gradient from="{{color3}}77" to="{{color2}}FF" angle=325
+  }
+}

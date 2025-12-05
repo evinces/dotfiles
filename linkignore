@@ -1,0 +1,4 @@
+# list of git tracked files which shouldn't be included in make-links
+linkignore
+make-links.py
+README.md

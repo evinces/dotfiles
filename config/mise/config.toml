@@ -1,0 +1,12 @@
+[env]
+GEMINI_SANDBOX = "true"
+SANDBOX_MOUNTS = "$HOME/.gitconfig:/etc/gitconfig"
+
+[settings]
+python.uv_venv_auto = true
+
+[tools]
+gemini-cli = "latest"
+node = "lts"
+usage = "latest"
+uv = "latest"

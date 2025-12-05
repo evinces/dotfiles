@@ -1,0 +1,15 @@
+# wallust.toml
+
+backend = "full"
+color_space = "lab"
+palette = "dark16"
+check_contrast = true
+
+[templates]
+fuzzel = { template = 'fuzzel.ini', target = '~/.config/fuzzel/colors.ini' }
+kitty = { template = 'kitty.conf', target = '~/.config/kitty/colors.conf' }
+mako = { template = 'mako', target = '~/.config/mako/mako-colors' }
+nvim = { template = 'nvim.lua', target = '~/.config/nvim/lua/generated_colors.lua' }
+niri = { template = 'niri.kdl', target = '~/.config/niri/colors.kdl' }
+qt6ct = { template = 'qt6ct.conf', target = '~/.config/qt6ct/colors/wallust.conf' }
+waybar = { template = 'waybar.css', target = '~/.config/waybar/colors.css' }

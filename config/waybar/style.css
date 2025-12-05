@@ -1,0 +1,172 @@
+@import "./colors.css";
+
+* {
+  font-family: "VictorMono Nerd Font Propo";
+  font-size: 24px;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow:
+    0 0 2px @background,
+    1px 1px 1px @background,
+    -1px 1px 1px @background,
+    1px -1px 1px @background,
+    -1px -1px 1px @background,
+    2px 0 2px @background,
+    -2px 0 2px @background,
+    0 2px 2px @background,
+    0 -2px 2px @background
+  ;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#workspaces,
+#custom-menu,
+#custom-term,
+#cpu,
+#mpris,
+#network,
+#bluetooth,
+#pulseaudio.microphone,
+#pulseaudio {
+  padding: 4px 0;
+}
+
+#custom-term:hover,
+#cpu:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#pulseaudio.sink-muted:hover,
+#custom-powermenu:hover {
+  opacity: 0.5;
+}
+
+#workspaces button {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button:hover,
+#workspaces button.active:hover {
+  color: @foreground;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+#workspaces button {
+  color: @color2;
+  padding: 0;
+}
+#workspaces button.active {
+  color: @color3;
+}
+
+#privacy {
+  margin: 4px;
+  color: @color4;
+}
+
+#clock {
+  color: @foreground;
+  opacity: 0.8;
+  font-weight: bold;
+  padding: 8px 0;
+  margin-top: -210px;
+  transition: margin-top 400ms ease-in-out;
+}
+#clock:hover {
+  margin-top: 0;
+}
+#custom-menu {
+  color: @color5;
+}
+#custom-term {
+  color: @color6;
+}
+#cpu {
+  color: @color7;
+}
+#mpris {
+  color: @color8;
+}
+
+#network.disabled {
+  color: @color1;
+}
+#network.wifi {
+  color: @color15;
+}
+#network.ethernet {
+  color: @color9;
+}
+
+#bluetooth {
+  color: @color10;
+}
+#bluetooth.disabled {
+  color: @color1;
+}
+#bluetooth.connected {
+  color: @color15;
+}
+
+#pulseaudio.microphone {
+  color: @color11
+}
+#pulseaudio {
+  color: @color12
+}
+#pulseaudio.sink-muted:not(.microphone) {
+  color: @color1;
+}
+#pulseaudio.microphone.source-muted {
+  color: @color1;
+}
+
+#battery.plugged {
+  color: @color2;
+}
+#battery.charging {
+  color: @color1;
+}
+#battery.critical {
+  color: @color15;
+}
+
+tooltip {
+  background: @background;
+  border: 1px solid @foreground;
+}
+tooltip * {
+  color: @foreground;
+  margin: 2px;
+  background: @background;
+}
+
+#pulseaudio-slider,
+#backlight-slider {
+  min-height: 80px;
+}
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+  background: transparent;
+}
+
+#pulseaudio-slider trough,
+#backlight-slider trough {
+  min-width: 8px;
+}
+
+#pulseaudio-slider highlight {
+  background: @color13;
+}
+#backlight-slider highlight {
+  background: @color13;
+}

@@ -1,0 +1,7 @@
+input {
+  keyboard { numlock; }
+  touchpad { tap; }
+  focus-follows-mouse max-scroll-amount="30%"
+}
+
+output "eDP-1" { mode "2560x1600@165"; }

@@ -1,0 +1,27 @@
+// waybar/config.jsonc
+
+{
+  "reload_style_on_change": true,
+  "toggle": true,
+  "layer": "top",
+  "position": "right",
+  "margin-top": 4,
+  "margin-bottom": 4,
+  "margin-left": 4,
+  "margin-right": 0,
+  "spacing": 0,
+  "include": ["~/.config/waybar/modules.json"],
+  "modules-left": ["clock", "niri/workspaces"],
+  "modules-right": [
+    "group/extras",
+    "custom/term",
+    "cpu",
+    "mpris",
+    "network",
+    "bluetooth",
+    "pulseaudio#microphone",
+    "group/audio",
+    "group/brightness",
+    "battery"
+  ]
+}

@@ -1,0 +1,38 @@
+include "io.kdl"
+include "rules.kdl"
+include "startup.kdl"
+include "binds.kdl"
+
+layout {
+  gaps 8
+  always-center-single-column
+  preset-column-widths {
+    proportion 0.33333
+    proportion 0.5
+    proportion 0.66667
+  }
+  default-column-width { proportion 0.5; }
+  border { off; }
+  shadow {
+    on
+    softness 16
+    spread 4
+    offset x=0 y=1
+    color "#0009"
+  }
+  focus-ring {
+    width 2
+    inactive-color "#0000"
+  }
+}
+
+cursor {
+  xcursor-theme "BreezeX-RosePine-Linux"
+  xcursor-size 32
+}
+
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+hotkey-overlay { skip-at-startup; }
+
+include "colors.kdl"

@@ -1,0 +1,5 @@
+spawn-at-startup "blueman-applet"
+spawn-at-startup "wallpaper.py" "restore"
+spawn-at-startup "1password"
+spawn-at-startup "discord"
+spawn-at-startup "steam" "-slient"
